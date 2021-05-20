@@ -32,12 +32,6 @@ export default {
       },
     },
     {
-      name: 'categories',
-      title: 'Categories',
-      type: 'array',
-      of: [{type: 'reference', to: {type: 'category'}}],
-    },
-    {
       name: 'publishedAt',
       title: 'Published at',
       type: 'datetime',
@@ -47,7 +41,11 @@ export default {
       title: 'Body',
       type: 'blockContent',
     },
-  ],
+    {
+      name: "link",
+      type:"url",
+  },
+ ],
 
   preview: {
     select: {
