@@ -79,7 +79,7 @@ export default function SingleProject(){
                              {new Date(singleProject.date).toLocaleDateString()}
                      </span>
                      <span>
-                         <strong className="font-bold">Company</strong>:{"  "}
+                         <strong className="font-bold">Place</strong>:{"  "}
                          {singleProject.place}
                       </span>
                       <span>

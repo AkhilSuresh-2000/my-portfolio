@@ -25,24 +25,24 @@ export default function About(){
     if(!author) return <div>Loading....</div>
 
     return (
-        <main className="relative">
-            <img src={aboutWallpapper} alt="abstract wallpaper" className="absolute w-full"/>
-            <div className="p-10 lg:pt-48 container mx-auto releative">
-                <section className="bg=green-800 rounded-lg shadow-2xl lg:flex p-20 z-10">
+        <div className="aboutWall">
+             <img src={aboutWallpapper} alt="abstract wallpaper" className="absolute w-full h-full" />
+            <main className="relative">
+            <div className="p-10 lg:pt-48 container mx-auto releative flex flex-wrap">
+                <section className="bg-green-800 rounded-lg shadow-2xl lg:flex p-20 z-10">
                     <div className="text-lg flex flex-col justify-center">
-                        <h2 className="cursive text-4xl text-green-300 mb-4 z-10">
+                        <h1 className="cursive text-2xl text-green-300 mb-4  w-full ">
                             Hey there. I'm {" "}
-                            <span className="text-green-100">{author.name}</span>
+                            <span className="text-green-600 ">{author.name}</span>
                              . I am a self-taught web/software developer knowledgeable in widerange of development
-                             languages and methodologies. My personality type is INFJ-T. All my projects can be founded on my github. To view my projects just click on the github icon on the top.
-                             You can get in touch with me through Linkedin.
-                        </h2>
-                        <div className="prose lg:prosexl text-white"> 
-                            <BlockContent blocks={author.bio} projectId="x530uecl" dataset="production"></BlockContent>
-                        </div>
+                             languages and methodologies. My personality type is INFJ-T. All my projects can be found on my github. To view my projects just click on the github icon on the top.
+                             You can get in touch with me through Linkedin. I enjoy nature,anime and videogames.
+                        </h1>
                     </div>
                 </section>
             </div>
         </main>
+        </div>
+        
     )
 }

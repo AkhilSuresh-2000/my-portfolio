@@ -1,7 +1,27 @@
 @import url("https://unpkg.com/@tailwindcss/typography@0.2.x/dist/typography.min.css");
 @import url("https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css");
 @import url("ttps://fonts.googleapis.com/css2?family=Amatic+SC&family=Montserrat:wght@700&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Reggae+One&display=swap');
 
+#root{
+  height:100vh;
+  width: 100%;
+}
+
+*{
+  margin:0;
+  padding:0;
+  box-sizing: border-box;
+  
+}
+body{
+  height: 100%;
+  width: 100%;
+}
+
+.reggae{
+  font-family: 'Reggae One', cursive;
+}
 
 .cursive{
   font-family: "Amatic SC", cursive;
@@ -19,9 +39,14 @@
   
   font-size: 150px;
 }
-
+.text_marginb{
+  margin-bottom: 4rem;
+}
+.text_margint{
+  margin-top: 4rem;
+}
 .bg_transparent{
-  background-color: rgba(255, 255, 255, 0.5);
+  background-color: rgba(255, 255, 255, 0.9);
 }
 
 @keyframes breath {
@@ -35,19 +60,22 @@
   50%  {  background-size: 140% auto; }
   100% {  background-size: 110% auto; }      
  }
+ 
+ 
  .animate_home{
   background-image: url("./wallpaper_2.jpg");
-  animation: breath 50s ease-in-out infinite;
-  -webkit-animation: breath 50ss ease-in-out infinite;
+  /* animation: breath 50s ease-in-out infinite;
+  -webkit-animation: breath 50ss ease-in-out infinite; */
   background-size: cover;
-  height: 100vh;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: auto;
   width: 100%;
  }
 
 
  .glow {
-  font-size: 80px;
-  color: #fff;
+  font-size: 40px;
   text-align: center;
   animation: glow 1s ease-in-out infinite alternate;
 }
@@ -85,13 +113,12 @@
 
 .text {
   color: white;
-  font-size: 80px;
+  font-size: 4vw;
   font-weight: bold;
   font-family: sans-serif;
   position: relative;
   user-select: none;
 }
-
 .text::before {
   content: attr(data-text);
   position: absolute;
@@ -102,7 +129,7 @@
 
 .gradient {
   position: absolute;
-  background: linear-gradient(45deg, red, gold, lightgreen, gold, red);
+  background: linear-gradient(45deg, red, gold, lightgreen);
   top: 0;
   left: 0;
   right: 0;
@@ -127,7 +154,7 @@
           white,
           black 25%
       ) center / 12.5% 12.5%;
-  animation: light 10s linear infinite;
+  animation: light 30s linear infinite;
   mix-blend-mode: color-dodge;
 }
 
@@ -136,3 +163,4 @@
       transform: translate(50%, 50%);
   }
 }
+
