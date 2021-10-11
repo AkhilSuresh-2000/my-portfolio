@@ -1,18 +1,50 @@
-import React from 'react'
+import React from "react";
+import Typed from "react-typed";
+import Particles from "react-particles-js";
 
 
-export default function Home(){
-
-    return (
-        <main className="animate_home neon">
-            <section className="releative flex justify-center min-h-screen pt-12 lg:pt-64 px-8"> 
-            <span className="text pl-10 text_marginb" data-text="Hello there, thanks for visiting my page">Hello there, thanks for visiting my page </span>
-             <span className="text text_margint" data-text="I am Akhil , I am a Web/Software developer"> 
-               <a href="/about">I am Akhil , I am a Web/Software developer</a>
-               </span>
-             <span className="gradient"></span>
-             <span className="spotlight"></span>
-            </section>
-        </main>
-    );
+export default function Home() {
+  return (
+    <div className="header-wrapper overflow-hidden overflow-x-hidden overflow-y-hidden no-scrollbar ">
+      <Particles
+        className="particles-canvas"
+        params={{
+          particles: {
+            number: {
+              value: 30,
+              density: {
+                enable: true,
+                value_area: 900,
+              },
+            },
+            shape: {
+              type: "star",
+              stroke: {
+                width: 6,
+                color: "#f9ab00",
+              },
+            },
+          },
+        }}
+      />
+      <div className="main-info reggae overflow-x-hidden overflow-y-hidden overflow-hidden  ">
+        <h1>Web Development and Promotions</h1>
+        <Typed
+          className="typed-text"
+          strings={[
+            "Web Design",
+            "Web Development",
+            "Mobile Application development",
+            "Google Ads",
+          ]}
+          typeSpeed={40}
+          backSpeed={60}
+          loop
+        />
+        <a href="Contact" className="btn-contact-me">
+          Contact me
+        </a>
+      </div>
+    </div>
+  );
 }

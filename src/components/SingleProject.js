@@ -5,6 +5,7 @@ import imageUrlBuilder from "@sanity/image-url"
 import BlockContent from "@sanity/block-content-to-react"
 
 const builder = imageUrlBuilder(sanityClient);
+// eslint-disable-next-line
 function urlFor(source){
     return builder.image(source)
 }
@@ -45,10 +46,10 @@ export default function SingleProject(){
     if(!singleProject) return <div>Loading...</div>;
 
     return(
-        <main>
-        <article className="container shadow-lg mx-auto  rounded-lg">
+        <main className="byeScroll">
+        <article className="container shadow-lg mx-auto  rounded-lg ">
             <header className="releative">
-                <div className="absolute h-full w-full items-center  justify-center p-8">  
+                <div className="absolute mt-10 ml-10">  
                     <div>
                         <h1 className="cursive text-3xl lg:text-6xl mb-4">
                             <a
@@ -60,10 +61,6 @@ export default function SingleProject(){
                             
                         </h1>
                         <div className="flex justify-center text-grey-800">
-                            <img src={urlFor(singleProject.authorImage).url()}
-                                alt={singleProject.name}
-                                className="w-10 h-10 rounded-full"
-                            /> 
                             <p className="cursive flex items-center pl-2 text-2xl">
                                 {singleProject.name}
                             </p>

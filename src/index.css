@@ -3,20 +3,30 @@
 @import url("ttps://fonts.googleapis.com/css2?family=Amatic+SC&family=Montserrat:wght@700&display=swap");
 @import url('https://fonts.googleapis.com/css2?family=Reggae+One&display=swap');
 
-#root{
-  height:100vh;
-  width: 100%;
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
 }
+
+.no-scrollbar {
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
+}
+
 
 *{
   margin:0;
   padding:0;
   box-sizing: border-box;
   
+
 }
 body{
   height: 100%;
   width: 100%;
+}
+
+.byeScroll{
+  overflow: hidden;
 }
 
 .reggae{
@@ -28,11 +38,8 @@ body{
   font-weight: 700;
 }
 
-.porse img{
-
-  margin-left: auto;
-  margin-right: auto;
-  border-radius: 5px;
+.nav{
+  z-index:2;
 }
 
 .home-name{
@@ -49,118 +56,119 @@ body{
   background-color: rgba(255, 255, 255, 0.9);
 }
 
-@keyframes breath {
-  0%   {  background-size: 110% auto; }
-  50%  {  background-size: 140% auto; }
-  100% {  background-size: 110% auto; }      
- }
-
-@-webkit-keyframes breath {
-  0%   {  background-size: 110% auto; }
-  50%  {  background-size: 140% auto; }
-  100% {  background-size: 110% auto; }      
- }
- 
- 
- .animate_home{
-  background-image: url("./wallpaper_2.jpg");
-  /* animation: breath 50s ease-in-out infinite;
-  -webkit-animation: breath 50ss ease-in-out infinite; */
+.header-wrapper{
+  position: relative;
+  background: url(./DSC_0258.JPG);
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  height: auto;
+  height: 100vh;
   width: 100%;
- }
-
-
- .glow {
-  font-size: 40px;
-  text-align: center;
-  animation: glow 1s ease-in-out infinite alternate;
 }
 
-
-@keyframes glow {
-  from {
-    text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #e60073, 0 0 40px #e60073, 0 0 50px #e60073, 0 0 60px #e60073, 0 0 70px #e60073;
-  }
-  
-  to {
-    text-shadow: 0 0 20px #fff, 0 0 30px #ff4da6, 0 0 40px #ff4da6, 0 0 50px #ff4da6, 0 0 60px #ff4da6, 0 0 70px #ff4da6, 0 0 80px #ff4da6;
-  }
-}
-
-
-@-webkit-keyframes glow {
-  from {
-    text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #e60073, 0 0 40px #e60073, 0 0 50px #e60073, 0 0 60px #e60073, 0 0 70px #e60073;
-  }
-  
-  to {
-    text-shadow: 0 0 20px #fff, 0 0 30px #ff4da6, 0 0 40px #ff4da6, 0 0 50px #ff4da6, 0 0 60px #ff4da6, 0 0 70px #ff4da6, 0 0 80px #ff4da6;
-  }
-}
-
-
-
-
-.neon {
+.contactbackgroud{
   position: relative;
-  overflow: hidden;
-  filter: brightness(200%);
+  background: url(./waterfall-192984.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 100vh;
+  width: 100%;
 }
 
-.text {
-  color: white;
-  font-size: 4vw;
-  font-weight: bold;
-  font-family: sans-serif;
-  position: relative;
-  user-select: none;
-}
-.text::before {
-  content: attr(data-text);
-  position: absolute;
-  color: white;
-  filter: blur(0.02em);
-  mix-blend-mode: difference;
+.blur{
+
+  backdrop-filter: blur(5px) ;
 }
 
-.gradient {
+
+.main-info{
+  display: flex;
   position: absolute;
-  background: linear-gradient(45deg, red, gold, lightgreen);
   top: 0;
   left: 0;
   right: 0;
   bottom: 0;
-  mix-blend-mode: multiply;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  font-size: 50px;
+  z-index: 1;
+  
 }
 
-.spotlight {
-  position: absolute;
-  top: -100%;
-  left: -100%;
-  right: 0;
-  bottom: 0;
-  background: 
-      radial-gradient(
-          circle,
-          white,
-          transparent 25%
-      ) center / 25% 25%,
-      radial-gradient(
-          circle,
-          white,
-          black 25%
-      ) center / 12.5% 12.5%;
-  animation: light 30s linear infinite;
-  mix-blend-mode: color-dodge;
+.main-info  h1{
+  color: orange;
+
 }
 
-@keyframes light {
-  to {
-      transform: translate(50%, 50%);
+@media(max-width:768px){
+  .main-info  h1{
+    font-size: 1.5rem !important;
+  }
+
+  .typed-text{
+    font-size: 1.3rem !important;
+  }
+
+  .btn-contact-me{
+    font-size: 1rem !important;
   }
 }
 
+.typed-text{
+  font-size: 2rem;
+  color: white;
+}
+
+.btn-contact-me{
+
+  border: 1px solid #ef4035;
+  border-radius: 0;
+  padding: 0.625rem 0.75rem 0.75rem 0.75rem;
+  color: white;
+  font-size: 25px;
+  margin: 2rem;
+}
+
+.btn-contact-me:hover{
+  text-decoration: none;
+  background-color: #ef4035;
+  color: white;
+  transition: .2s ease-in-out;
+}
+
+.tsparticles-canvas-el{
+
+  position: absolute;
+  height: 100vh;
+  width: 100vw;
+  z-index: 1;
+}
+
+@media(max-width:768px){
+  .particles-canvas{
+    display: none;
+  }
+}
+
+html {
+  --scrollbarBG: #CFD8DC;
+  --thumbBG: #90A4AE;
+}
+body::-webkit-scrollbar {
+  width: 8px;
+}
+body {
+  scrollbar-width: thin;
+  scrollbar-color: var(--thumbBG) var(--scrollbarBG);
+}
+body::-webkit-scrollbar-track {
+  background: var(--scrollbarBG);
+}
+body::-webkit-scrollbar-thumb {
+  background-color: var(--thumbBG) ;
+  border-radius: 6px;
+  border: 3px solid var(--scrollbarBG);
+}
